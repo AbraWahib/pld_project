@@ -1,0 +1,65 @@
+"Start Symbol" = <start>
+! -------------------------------------------------
+! Terminals
+! -------------------------------------------------
+Id = [_]|{letter}{Alphanumeric}*
+digit = ('+'|'-')?{digit}+ ('.'{digit}+)? (('e'|('+'|'-')?{digit}+) '^' ('+'|'-'){digit}+ ('.'{digit}+)? )?
+! -------------------------------------------------
+! Rules
+! -------------------------------------------------
+
+! The grammar starts below
+<start> ::= Start <stmt_list> End
+           
+<stmt_list> ::= <concept>
+        |<concept><stmt_list>
+        
+<concept> ::= <assign>
+        |<if_stmt>
+        |<for_stmt>
+       
+!----assign---- 
+<assign> ::= <id>'='<expr> ';'
+          
+<id> ::= Id
+      
+<expr> ::= <expr>'+'<term>
+        |<expr>'-'<term>
+        |<term>
+        
+<term> ::= <term>'*'<fact>
+        |<term>'/'<fact>
+        |<fact>
+        
+<fact> ::= <fact>'**'<exp>
+        |<exp>
+         
+<exp> ::= '('<exp>')'
+       |<id>
+       |<digit>
+       
+<digit> ::= digit
+         
+!----if_stmt----
+<if_stmt> ::= if'('<condition>')'Start <stmt_list> End
+          |if'('<condition>')'Start <stmt_list> End else Start <stmt_list> End
+          
+<condition> ::= <expr><op><expr>
+             
+<op>::= '<'
+     |'>'
+     |'=='
+     |'!='
+     
+!----for----
+<for_stmt>::= for'('<data><assign>';'<condition>';'<step>')'Start <stmt_list> End
+           
+<data>::= int |float |double |string
+       
+<step> ::= '--'<id>
+        |'++'<id>
+        |<id>'--'
+        |<id>'++'
+        |<assign>
+        
+

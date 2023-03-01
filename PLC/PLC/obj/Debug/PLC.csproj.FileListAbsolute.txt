@@ -1,0 +1,13 @@
+E:\project\pld\PLC\PLC\bin\Debug\PLC.exe.config
+E:\project\pld\PLC\PLC\bin\Debug\PLC.exe
+E:\project\pld\PLC\PLC\bin\Debug\PLC.pdb
+E:\project\pld\PLC\PLC\obj\Debug\PLC.csprojAssemblyReference.cache
+E:\project\pld\PLC\PLC\obj\Debug\PLC.Form1.resources
+E:\project\pld\PLC\PLC\obj\Debug\PLC.Properties.Resources.resources
+E:\project\pld\PLC\PLC\obj\Debug\PLC.csproj.GenerateResource.cache
+E:\project\pld\PLC\PLC\obj\Debug\PLC.csproj.CoreCompileInputs.cache
+E:\project\pld\PLC\PLC\obj\Debug\PLC.exe
+E:\project\pld\PLC\PLC\obj\Debug\PLC.pdb
+E:\project\pld\PLC\PLC\bin\Debug\CalithaLib.dll
+E:\project\pld\PLC\PLC\bin\Debug\GoldParserEngine.dll
+E:\project\pld\PLC\PLC\obj\Debug\PLC.csproj.CopyComplete
